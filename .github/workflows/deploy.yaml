@@ -16,6 +16,10 @@ on:
         type: boolean
         description: Create a pre-release
 
+permissions:
+  id-token: write # For NPM trusted publishing
+  contents: write # For git commits of Changelog
+
 jobs:
   npm:
     name: NPM
@@ -46,11 +50,19 @@ jobs:
           git config --local user.name 'github-actions[bot]'
           git config --local user.email 'github-actions[bot]@users.noreply.github.com'
 
+      # Ensure npm 11.5.1 or later is installed
+      - name: Update npm
+        run: |
+          echo 'BEFORE'
+          npm -v
+          npm install -g npm@latest
+          echo 'AFTER'
+          npm -v
+
       - name: Publish to NPM
         if: github.event.inputs.pre_release != 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
             pnpm run release --dry-run
@@ -62,7 +74,6 @@ jobs:
         if: github.event.inputs.pre_release == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
             pnpm run prerelease --dry-run
