@@ -10,6 +10,8 @@
 Using the standard icons works just like the standard icons in this library.
 
 ```javascript
+import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6/static";
+// or with dynamic font loading (see the Expo setup guide for details)
 import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6";
 
 const icon = <FontAwesome6 name="comments" />;
@@ -49,6 +51,18 @@ import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6";
 FontAwesome6.getImageSource("solid", "comments", 30, "#000").then((source) =>
   this.setState({ image: source }),
 );
+```
+
+### Expo Config Plugin
+
+This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md). Add it to the `plugins` array in your `app.json` or `app.config.js` if you use static imports:
+
+```json
+{
+  "expo": {
+    "plugins": ["@react-native-vector-icons/fontawesome6"]
+  }
+}
 ```
 
 # Upgrading to Pro

@@ -14,13 +14,7 @@ npm install @react-native-vector-icons/fontello
 
 1. Add the config.json somewhere in your project to be imported
 2. Add the ttf file into `rnvi-fonts/fontello`. You can customise this location as described in [react-native-vector-icons](../../README.md#custom-fonts)
-3. Add this package to your project
-
-```sh
-pnpm install @react-native-vector-icons/fontello
-```
-
-4. Create the component in your project and use it
+3. Create the component in your project and use it
 
 ```js
 import createIconSet from '@react-native-vector-icons/fontello';
@@ -36,6 +30,18 @@ If you want to customise the font postscript name and filename you can pass extr
 import createIconSet from "@react-native-vector-icons/fontello";
 import fontelloConfig from "./config.json";
 const Icon = createIconSet(fontelloConfig, "Font Family", "FontFamily.ttf");
+```
+
+### Expo Config Plugin
+
+This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md) to register the font with iOS. Add it to the `plugins` array in your `app.json` or `app.config.js`:
+
+```json
+{
+  "expo": {
+    "plugins": ["@react-native-vector-icons/fontello"]
+  }
+}
 ```
 
 ## Contributing
