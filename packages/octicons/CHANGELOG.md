@@ -1,3 +1,18 @@
+## 21.1.0 (2026-04-12)
+
+### 🚀 Features
+
+- add expo config plugins ([#1893](https://github.com/oblador/react-native-vector-icons/pull/1893))
+
+### 🩹 Fixes
+
+- upgrade Octicons to v19.23.1 ([#1902](https://github.com/oblador/react-native-vector-icons/pull/1902))
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+- Vojtech Novak @vonovak
+
 # 21.0.0 (2026-03-26)
 
 ### 🧱 Updated Dependencies
