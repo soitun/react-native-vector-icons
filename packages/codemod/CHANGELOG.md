@@ -1,3 +1,13 @@
+## 13.0.1 (2026-04-18)
+
+### 🩹 Fixes
+
+- improve expo codemod instructions ([#1906](https://github.com/oblador/react-native-vector-icons/pull/1906))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 # 13.0.0 (2026-04-12)
 
 This was a version bump only for @react-native-vector-icons/codemod to align it with other projects, there were no code changes.

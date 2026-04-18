@@ -1,3 +1,14 @@
+## 13.2.0 (2026-04-18)
+
+### 🚀 Features
+
+- allow icon name type-checking in fontello and icomoon ([#1907](https://github.com/oblador/react-native-vector-icons/pull/1907))
+- support new icomoon format ([#1905](https://github.com/oblador/react-native-vector-icons/pull/1905))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 13.1.0 (2026-04-12)
 
 ### 🚀 Features
