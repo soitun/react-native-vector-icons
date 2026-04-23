@@ -1,3 +1,13 @@
+## 21.1.1 (2026-04-23)
+
+### 🩹 Fixes
+
+- expo plugin exports ([#1909](https://github.com/oblador/react-native-vector-icons/pull/1909))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 21.1.0 (2026-04-12)
 
 ### 🚀 Features
