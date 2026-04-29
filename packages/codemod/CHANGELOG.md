@@ -1,3 +1,13 @@
+## 13.1.0 (2026-04-29)
+
+### 🚀 Features
+
+- expand codemod features and docs ([#1910](https://github.com/oblador/react-native-vector-icons/pull/1910))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 13.0.1 (2026-04-18)
 
 ### 🩹 Fixes
