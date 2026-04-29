@@ -8,12 +8,22 @@ import { checkGitStatus } from './checkGitStatus';
 import { runExpoMigration } from './expo';
 import { readPackageDeps } from './readPackageDeps';
 
-async function main() {
-  const dir = process.argv[2];
-  if (!dir) {
-    console.error('Specify a directory in which to run the codemod');
-    process.exit(1);
+function parseArgs(argv: string[]): { dir: string; useStatic: boolean | undefined } {
+  let useStatic: boolean | undefined;
+  const positionals: string[] = [];
+  for (const arg of argv) {
+    if (arg === '--static') useStatic = true;
+    else if (arg === '--dynamic') useStatic = false;
+    else if (arg.startsWith('--')) {
+      console.error(`Unknown flag: ${arg}`);
+      process.exit(1);
+    } else positionals.push(arg);
   }
+  return { dir: positionals[0] ?? process.cwd(), useStatic };
+}
+
+async function main() {
+  const { dir, useStatic } = parseArgs(process.argv.slice(2));
 
   checkGitStatus(dir);
 
@@ -29,7 +39,7 @@ async function main() {
   const expoVectorIcons = dependencies['@expo/vector-icons'];
 
   if (expoVectorIcons) {
-    await runExpoMigration(dir);
+    await runExpoMigration(dir, { useStatic });
   } else {
     console.log('Running codemod in', dir);
     if (dependencies['react-native-vector-icons']) {
@@ -64,7 +74,7 @@ async function main() {
   NOTE: You may need to run again to upgrade to the next version.
   NOTE: You may need to run 'npm install' to install new dependencies.
   
-  Check https://github.com/react-native-vector-icons/react-native-vector-icons/blob/master/MIGRATION.md for any manual steps
+  Check https://github.com/oblador/react-native-vector-icons/blob/master/MIGRATION.md for any manual steps
   `);
   }
 }
