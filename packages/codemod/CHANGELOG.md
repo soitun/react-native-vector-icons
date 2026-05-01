@@ -1,3 +1,13 @@
+## 13.2.1 (2026-05-01)
+
+### 🩹 Fixes
+
+- **codemod:** check project path exists early ([#1914](https://github.com/oblador/react-native-vector-icons/pull/1914))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 13.2.0 (2026-04-29)
 
 ### 🚀 Features
