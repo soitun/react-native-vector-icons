@@ -1,3 +1,10 @@
+## 13.1.3 (2026-08-20)
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/fontawesome-common to 13.0.2
+- Updated @react-native-vector-icons/common to 13.0.2
+
 ## 13.1.2 (2026-05-24)
 
 ### 🧱 Updated Dependencies

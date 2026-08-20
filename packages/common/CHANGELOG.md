@@ -1,3 +1,14 @@
+## 13.0.2 (2026-08-20)
+
+### 🩹 Fixes
+
+- resolve asset registry on react-native 0.87 ([#1924](https://github.com/oblador/react-native-vector-icons/pull/1924), [#1923](https://github.com/oblador/react-native-vector-icons/issues/1923))
+
+### ❤️ Thank You
+
+- Claude Opus 5 (1M context)
+- Vojtech Novak @vonovak
+
 ## 13.0.1 (2026-05-24)
 
 ### 🩹 Fixes
