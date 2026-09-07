@@ -1,3 +1,13 @@
+## 13.0.1 (2026-09-07)
+
+### 🩹 Fixes
+
+- **android:** skip explicit Kotlin plugin when AGP registers the kotlin extension ([#1928](https://github.com/oblador/react-native-vector-icons/pull/1928))
+
+### ❤️ Thank You
+
+- Gabriel Donadel Dall'Agnol @gabrieldonadel
+
 # 13.0.0 (2026-03-26)
 
 ### 🚀 Features

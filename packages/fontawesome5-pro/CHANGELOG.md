@@ -1,3 +1,18 @@
+## 13.1.4 (2026-09-07)
+
+### 🩹 Fixes
+
+- **android:** skip explicit Kotlin plugin when AGP registers the kotlin extension ([#1928](https://github.com/oblador/react-native-vector-icons/pull/1928))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/fontawesome-common to 13.0.3
+- Updated @react-native-vector-icons/common to 13.0.3
+
+### ❤️ Thank You
+
+- Gabriel Donadel Dall'Agnol @gabrieldonadel
+
 ## 13.1.3 (2026-08-20)
 
 ### 🧱 Updated Dependencies
